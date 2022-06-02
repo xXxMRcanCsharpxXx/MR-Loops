@@ -51,13 +51,14 @@ namespace template_csharp_loops
                 int i;
                 Console.WriteLine("Enter a number from 1-20");
                 int input = Int32.Parse(Console.ReadLine());
-                for ( i = input; input >= 0; i--)
+                for (i = input; input >= 0; i--)
                 {
                     Console.WriteLine(i);
                 }
 
-            Console.Write("Press enter to return to the Main Menu");
-            Console.ReadLine();
+                Console.Write("Press enter to return to the Main Menu");
+                Console.ReadLine();
+            }
         }
 
         public static void SquareOfEvenNumbers()
@@ -67,52 +68,21 @@ namespace template_csharp_loops
             Console.Clear();
             Console.WriteLine("PRINT THE SQUARE OF EVEN NUMBERS\n");
 
-                // SOLUTION HERE
-        {
-
-            // Function to print all the perfect
-            // squares from the given range
-            static void perfectSquares(float l, float r)
+            // SOLUTION HERE
+            for (int i = 0; i <= 9; i++)
             {
-
-                // Getting the very first number
-                int number = (int)Math.Ceiling(Math.Sqrt(l));
-
-                // First number's square
-                int n2 = number * number;
-
-                // Next number is at the difference of
-                number = (number * 2) + 1;
-
-                // While the perfect squares
-                // are from the range
-                while ((n2 >= l && n2 <= r))
+                if (i % 2 == 0)
                 {
-
-                    // Print the perfect square
-                    Console.Write(n2 + " ");
-
-                    // Get the next perfect square
-                    n2 = n2 + number;
-
-                    // Next odd number to be added
-                    number += 2;
+                    Console.WriteLine(i * i);
                 }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+
             }
 
-           
-            public static void Main(String[] args)
-            {
-                int l = 2, r = 24;
-
-                perfectSquares(l, r);
-            }
-        }
-
-        
-
-
-
+         
         Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -129,10 +99,19 @@ namespace template_csharp_loops
 
             int userInput = Convert.ToInt32(Console.ReadLine());
 
-                // This reads the user's input and converts it to an integer.
-                // We'll assume that users can only input integers.
-                // SOLUTION HERE
-                
+            // This reads the user's input and converts it to an integer.
+            // We'll assume that users can only input integers.
+            // SOLUTION HERE
+            Console.WriteLine("Enter a number");
+            int num = Int32.Parse(Console.ReadLine());
+            while (num % 3 != 0)
+            {
+                Console.WriteLine("Try Again");
+                num = Int32.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("You won!");
+
+            
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
